@@ -1,0 +1,13 @@
+void display_reverse(SinglyLinkedListNode* ptr){
+    if(ptr->next !=NULL){
+        display_reverse(ptr->next);
+    }
+    cout<<ptr->data<<"\n";
+}
+void reversePrint(SinglyLinkedListNode* llist) {
+    SinglyLinkedListNode* ptr;
+    ptr=llist;
+    if(llist==NULL)
+    return;
+    display_reverse(ptr);
+}
